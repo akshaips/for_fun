@@ -13,7 +13,7 @@ def read_input(filename): #read the input file and check the size of sudoku
 		puzzle_row = []
 		for field in lines_split:
 			field = field.replace("\n","")
-			if field == "":
+			if field == "" or field == " ":
 				field = 0
 			puzzle_row.append(int(field))
 		assert len(puzzle_row) == 9, "Row " + str(count) + " has only " + str(len(puzzle_row)) + " entries (9 required)"
