@@ -7,24 +7,24 @@ from operator import itemgetter
 import warnings
 warnings.filterwarnings("ignore")
 
-random.seed(0)
-colony_count = 6
-individual_count = 100
-simulation_days = 50
+#random.seed(0) # Fixing on random seed
+colony_count = 6 # Number of colonies
+individual_count = 100 # Individuals in each colony
+simulation_days = 50 # Number of days of simulation (steps = number of days * 24)
 
 ##############################
-#epidemic parameters
-alpha = 0.5
-beta = 1/7
-contact_radius = 7
-recovery_days = 15
-travel_probability = 0.1
-lockdown_count = 30
-initial_infect_probability = 0.05
-social_distance_count = 30
-min_box = -100
-max_box = 100
-movement_step_size = 5
+#Epidemic parameters
+alpha = 0.5 # Probability of getting infected
+beta = 1/7 # Probability of getting recovered
+contact_radius = 7 # Radius in which infection can happen
+recovery_days = 15 # Days needed for recovery
+travel_probability = 0.1 # Probability of travelling to other colonies
+lockdown_count = 30 # Lockdown of travelling if the number of infection increases the given number
+initial_infect_probability = 0.05 # Initial probability of getting infected
+social_distance_count = 30 # Social distancing if the number of infection increases the given number
+min_box = -100 # Colony dimension
+max_box = 100 # Colony dimension
+movement_step_size = 5 # Individual's movement upper limit on each step
 
 def init_colony(colony_count,individual_count):
     box = {"xmin": min_box, "xmax": max_box, "ymin": min_box, "ymax": max_box}
