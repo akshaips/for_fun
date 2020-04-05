@@ -138,5 +138,6 @@ sanity_check(puzzle) #check the input sudoku is correct or not
 position_dict = get_0_index(puzzle) #get index where zeros are present and make it into a dict
 back_prop_position = 0	 #index to start the program from
 
+
 while True:
 	puzzle,back_prop_position,position_dict = solve_puzzle(puzzle,position_dict,back_prop_position)
