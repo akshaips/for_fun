@@ -4,6 +4,7 @@ Run:
 python solve_soduku.py puzzle.txt
 
 for eg:
+
 ,,,,,,,0,0
 0,0,3,6,0,0,0,0,0
 0,7,0,0,9,0,2,0,0
